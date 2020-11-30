@@ -42,7 +42,7 @@ export default function PizzaMakersPage({ data, pageContext }) {
   const pizzamakers = data.pizzamakers.nodes;
   return (
     <>
-      <SEO title={`Slicemasters - Page ${pageContext.currentPage || 1}`} />
+      <SEO title={`Pizzamakers - Page ${pageContext.currentPage || 1}`} />
       <Pagination
         pageSize={parseInt(process.env.GATSBY_PAGE_SIZE)}
         totalCount={data.pizzamakers.totalCount}
@@ -69,7 +69,7 @@ export default function PizzaMakersPage({ data, pageContext }) {
 
 export const query = graphql`
   query($skip: Int = 0, $pageSize: Int = 2) {
-    slicemasters: allSanityPerson(limit: $pageSize, skip: $skip) {
+    pizzamakers: allSanityPerson(limit: $pageSize, skip: $skip) {
       totalCount
       nodes {
         name
