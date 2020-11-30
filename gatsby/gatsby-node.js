@@ -121,7 +121,6 @@ async function turnPizzaMakersIntoPages({ graphql, actions }) {
   const pageCount = Math.ceil(data.pizzamakers.totalCount / pageSize);
   // 4. Loop from 1 to n and create the pages for each
   Array.from({ length: pageCount }).forEach((_, i) => {
-    console.log(`Creating page ${i}`);
     actions.createPage({
       path: `/pizzamakers/${i + 1}`,
       component: path.resolve('./src/pages/pizzamakers.js'),
