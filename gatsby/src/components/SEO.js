@@ -9,7 +9,6 @@ export default function SEO({ children, location, description, title, image }) {
         siteMetadata {
           title
           description
-          twitter
         }
       }
     }

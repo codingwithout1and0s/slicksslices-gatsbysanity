@@ -17,6 +17,7 @@ const SingleBeerStyles = styled.div`
     width: 100%;
     height: 200px;
     object-fit: contain;
+    display: block;
     display: grid;
     align-items: center;
     font-size: 10px;
@@ -28,7 +29,7 @@ export default function BeersPage({ data }) {
     <>
       <SEO title={`Beers! We have ${data.beers.nodes.length} in stock`} />
       <h2 className="center">
-        We have {data.beers.nodes.length} beers available. Dine in only!
+        We have {data.beers.nodes.length} Beers Available. Dine in Only!
       </h2>
       <BeerGridStyles>
         {data.beers.nodes.map((beer) => {
@@ -40,7 +41,7 @@ export default function BeersPage({ data }) {
               {beer.price}
               <p title={`${rating} out of 5 stars`}>
                 {`⭐`.repeat(rating)}
-                <span style={{ filter: `grayscrale(100%)` }}>
+                <span style={{ filter: `grayscale(100%)` }}>
                   {`⭐`.repeat(5 - rating)}
                 </span>
                 <span>({beer.rating.reviews})</span>

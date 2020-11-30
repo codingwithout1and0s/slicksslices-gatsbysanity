@@ -18,7 +18,7 @@ const Typography = createGlobalStyle`
     font-weight: normal;
     margin: 0;
   }
-  a { 
+  a {
     color: var(--black);
     text-decoration-color: var(--red);
     /* Chrome renders this weird with this font, so we turn it off */

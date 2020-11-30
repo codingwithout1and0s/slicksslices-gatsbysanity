@@ -14,7 +14,6 @@ export default function PizzamakerPage({ data: { person } }) {
         </h2>
         <p>{person.description}</p>
       </div>
-      gi
     </>
   );
 }

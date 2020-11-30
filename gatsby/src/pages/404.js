@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function FourOhFour() {
-  return <p>Hey - That page doesn't exist!</p>;
+export default function FourOhFourPage() {
+  return <p>Hey - That page doesn't exist~</p>;
 }

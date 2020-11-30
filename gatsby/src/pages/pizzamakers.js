@@ -22,6 +22,7 @@ const PizzaMakerStyles = styled.div`
     transform: rotate(-2deg);
     text-align: center;
     font-size: 4rem;
+    margin-bottom: -2rem;
     position: relative;
     z-index: 2;
   }
@@ -30,9 +31,9 @@ const PizzaMakerStyles = styled.div`
     padding: 1rem;
     margin: 2rem;
     margin-top: -6rem;
-    position: relative;
     z-index: 2;
-    tranform: rotate(1deg);
+    position: relative;
+    transform: rotate(1deg);
     text-align: center;
   }
 `;
@@ -51,7 +52,7 @@ export default function PizzaMakersPage({ data, pageContext }) {
       />
       <PizzaMakerGrid>
         {pizzamakers.map((person) => (
-          <PizzaMakerStyles>
+          <PizzaMakerStyles key={person.id}>
             <Link to={`/pizzamaker/${person.slug.current}`}>
               <h2>
                 <span className="mark">{person.name}</span>
@@ -67,8 +68,8 @@ export default function PizzaMakersPage({ data, pageContext }) {
 }
 
 export const query = graphql`
-  query($skip: Int = 0, $pageSize: Int = 4) {
-    pizzamakers: allSanityPerson(limit: $pageSize, skip: $skip) {
+  query($skip: Int = 0, $pageSize: Int = 2) {
+    slicemasters: allSanityPerson(limit: $pageSize, skip: $skip) {
       totalCount
       nodes {
         name
