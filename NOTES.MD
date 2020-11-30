@@ -1,0 +1,1 @@
+Gatsby used for front end. Sanity used for back end.
