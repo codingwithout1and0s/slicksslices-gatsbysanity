@@ -102,7 +102,7 @@ export default function OrdersPage({ data }) {
           <legend>Order</legend>
           <PizzaOrder
             order={order}
-            removeFromORder={removeFromOrder}
+            removeFromOrder={removeFromOrder}
             pizzas={pizzas}
           />
         </fieldset>
